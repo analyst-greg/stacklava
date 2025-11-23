@@ -1,7 +1,9 @@
 # install.packages("shinylive")
 
+#excellent tutorial for dockerized dev environment - https://github.com/RamiKrispin/vscode-r
+# tutorial for shinylive itself: https://github.com/RamiKrispin/shinylive-r?tab=readme-ov-file
+
 library(shinylive)
 
-# Copy "Hello World" from `{shiny}`
-system.file("examples", "01_hello", package="shiny") |>
-  fs::dir_copy("myapp", overwrite = TRUE)
+
+shinylive::export("stacklava_app", "site")
